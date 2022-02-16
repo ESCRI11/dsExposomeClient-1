@@ -15,7 +15,10 @@
 git remote set-url origin "https://${GITHUB_TOKEN}@github.com/${BUILD_REPOSITORY_NAME}.git"
 git checkout -f master
 git fetch --tags
+
+Rscript -e "withr::with_libpaths(new = '${R_LIBS_USER}', devtools::install())"
 Rscript -e "withr::with_libpaths(new = '${R_LIBS_USER}', dsExposomeClient::ds.exposome_correlation)"
+
 #Rscript -e "withr::with_libpaths(new = '${R_LIBS_USER}', git2r::config(user.email = 'xavier.escriba@isglobal.org', user.name = 'Azure Pipeline'))"
 #RELEASE_SCOPE="patch"
 #Rscript -e "withr::with_libpaths(new = '${R_LIBS_USER}', usethis::use_version('${RELEASE_SCOPE}'))"
