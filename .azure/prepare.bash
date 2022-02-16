@@ -5,7 +5,7 @@ echo "Create user libraries directory R [ ${R_LIBS_USER} ]"
 mkdir -p "${R_LIBS_USER}"
 
 Rscript -e "install.packages(c('git2r', 'covr', 'withr', 'devtools', 'lintr', 'mockery', 'pkgdown'), repos='https://cloud.r-project.org', lib='${R_LIBS_USER}')"
-Rscript -e "install.packages(c('DSI', 'DSOpal'), repos='https://cloud.r-project.org', lib='${R_LIBS_USER}')"
+Rscript -e "install.packages(c('DSI', 'DSOpal', 'FactoMineR'), repos='https://cloud.r-project.org', lib='${R_LIBS_USER}')"
 Rscript -e "install.packages(c('BiocManager'), repos='https://cloud.r-project.org', lib='${R_LIBS_USER}')"
 Rscript -e "devtools::install_github('isglobal-brge/dsExposome', 'master', lib='${R_LIBS_USER}')"
 Rscript -e "BiocManager::install('BiocStyle', lib='${R_LIBS_USER}')"
