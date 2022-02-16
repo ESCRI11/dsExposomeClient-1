@@ -3,7 +3,6 @@ pkgdown: 2.0.2
 pkgdown_sha: ~
 articles:
   dsExposome: dsExposome.html
-  correlation: rmd/correlation.html
   exp_pheno_names: rmd/exp_pheno_names.html
   exploring_dataset: rmd/exploring_dataset.html
   exposures_behaviour: rmd/exposures_behaviour.html
@@ -18,5 +17,5 @@ articles:
   resource_to_exposome: rmd/resource_to_exposome.html
   summary_variables: rmd/summary_variables.html
   tables_to_exposome: rmd/tables_to_exposome.html
-last_built: 2022-02-16T22:08Z
+last_built: 2022-02-16T23:35Z
 
