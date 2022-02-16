@@ -10,7 +10,7 @@ author:
   - &isglobal Bioinformatics Research Group in Epidemiolgy (BRGE), Barcelona Insitute for Global Health (ISGlobal)
   email: juanr.gonzalez@isglobal.org
 date: "`r Sys.Date()`"
-package: "`r pkg_ver('dsExposome')`, `r pkg_ver('dsExposomeClient')`"
+package: "`r pkg_ver('dsExposomeClient')`"
 output:
   BiocStyle::html_document
 bibliography: dsExposome_Vignette.bib
