@@ -7,7 +7,7 @@ ds.exposome_correlation("exposome_object")[[1]][[1]]$`Correlation Matrix`[1:5,1:
 When subsetting the exposome set by families the correlation succeeds.
 
 ```{r}
-ds.exposome_correlation("exposome_object", c("Metals", "Noise"))[[1]][[1]]$`Correlation Matrix`[1:5,1:5]
+dsExposomeClient::ds.exposome_correlation("exposome_object", c("Metals", "Noise"))[[1]][[1]]$`Correlation Matrix`[1:5,1:5]
 ```
 
 The output from the `ds.correlation` consists of the correlation matrix and a vector that contains the names of exposures and families on the correlation table, this second item is used by the `corPlot` function to display the results of the correlation study.
