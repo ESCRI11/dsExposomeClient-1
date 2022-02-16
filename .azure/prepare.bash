@@ -10,5 +10,5 @@ Rscript -e "install.packages(c('BiocManager'), repos='https://cloud.r-project.or
 Rscript -e "devtools::install_github('isglobal-brge/dsExposome', 'master', lib='${R_LIBS_USER}')"
 Rscript -e "BiocManager::install('BiocStyle', lib='${R_LIBS_USER}')"
 Rscript -e "BiocManager::install('S4Vectors', lib='${R_LIBS_USER}')"
-Rscript -e "withr::with_libpaths(new = '${R_LIBS_USER}', devtools::install_github('datashield/dsBaseClient', ref='6.1.0'))"
+Rscript -e "withr::with_libpaths(new = '${R_LIBS_USER}', devtools::install_github('datashield/dsBaseClient', ref='6.1.1'))"
 cd "${BUILD_REPOSITORY_LOCALPATH}"
