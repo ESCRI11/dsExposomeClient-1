@@ -1,3 +1,5 @@
+# dsExposomeClient 1.0.12
+
 fixed news
 
 # dsExposomeClient 1.0.11
