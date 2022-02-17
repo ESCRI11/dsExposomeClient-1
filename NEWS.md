@@ -1,3 +1,5 @@
+fixed news
+
 # dsExposomeClient 1.0.11
 
 cambiolos nous
@@ -6,6 +8,6 @@ cambiolos nous
 
 lesgo canvis 
 
-# 1.0.0
+# dsExposomeClient 1.0.0
 
 First release
