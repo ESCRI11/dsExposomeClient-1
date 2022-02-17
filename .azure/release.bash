@@ -21,7 +21,7 @@ Rscript -e "withr::with_libpaths(new = '${R_LIBS_USER}', usethis::use_version('$
 TAG=$(grep Version DESCRIPTION | head -n1 | cut -d':' -f2 | xargs)
 PACKAGE=$(grep Package DESCRIPTION | head -n1 | cut -d':' -f2 | xargs)
 Rscript -e "withr::with_libpaths(new = '${R_LIBS_USER}', devtools::document())"
-echo "# ${TAG}" >> NEWS.md
+# echo "# ${TAG}" >> NEWS.md
 Rscript -e "withr::with_libpaths(new = '${R_LIBS_USER}', pkgdown::build_site())"
 git commit -a -m "[ci skip] Created release: ${TAG}"
 echo "Releasing ${PACKAGE} ${TAG}"
