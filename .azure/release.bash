@@ -28,7 +28,13 @@ echo "Releasing ${PACKAGE} ${TAG}"
 R CMD build .
 Rscript -e "withr::with_libpaths(new = '${R_LIBS_USER}', devtools::check_built(path = './${PACKAGE}_${TAG}.tar.gz', force_suggests = TRUE))"
 git tag "${TAG}"
-echo "Creating new development version for R-package: [ ${BUILD_REPOSITORY_NAME} ]"
+echo "Creating new development version for R-package: [ ${BUILD_REPOSITORY_NAME} ]" # create this version on the `dev` branch
+# Rebase `dev` branch to `master`
+git checkout dev
+git rebase master
+# Use dev-versioning number (-9000)
 Rscript -e "withr::with_libpaths(new = '${R_LIBS_USER}', usethis::use_version('dev'))"
 git commit -a -m '[ci skip]: Increment dev-version number'
+# Push `dev`/`master`
 git push --tags origin master
+git push --tags origin dev
